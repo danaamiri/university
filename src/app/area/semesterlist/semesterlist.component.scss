@@ -1,0 +1,67 @@
+
+#profile-content{
+  margin-bottom: 100px;
+}
+#profile-page{
+
+}
+
+#logo-img {
+  width: 125px;
+  height: 125px;
+  padding-top: 20px;
+}
+#pr-img {
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 250px;
+  height: 250px;
+}
+#profile-img{
+  margin:50px;
+}
+#logo{
+  text-align: center;
+}
+#profile-text{
+  font-family: sans-serif;
+  padding-top:25px;
+}
+
+/* ==========================================================================
+                               SemesterList
+   ========================================================================== */
+#listofsemester{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#semesterlist{
+  background-color: powderblue;
+  padding-top: 35px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, -1);
+  height:400px;
+  width:350px;
+  border-radius: 15px;
+
+}
+.List {
+  border: 2px solid blue;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 5px;
+}
+.List p{
+  font-size: 15px;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 5px;
+}
+.List:hover{
+  background-color: #87CEFA;
+}
+.List:hover p{
+  color: aliceblue;
+}
