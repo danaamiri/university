@@ -1,5 +1,5 @@
 import {AfterViewChecked, Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
   title = 'university';
   isLogin = true;
 
-  constructor(private activeRouter: ActivatedRoute) {
-
+  constructor(private activeRouter: ActivatedRoute,
+              private router: Router) {
+    router.events.subscribe(x => {
+      this.checkRoute();
+    });
   }
 
   ngOnInit(): void {
@@ -27,5 +30,9 @@ export class AppComponent implements OnInit, AfterViewChecked {
     this.isLogin = window.location.href.split('/')[3] === 'login';
   }
 
+  logout() {
+    localStorage.removeItem('access-token');
+    this.router.navigate(['/login']);
+  }
 
 }

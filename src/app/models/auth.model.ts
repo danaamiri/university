@@ -20,6 +20,6 @@ export interface LoginRequestModel {
 }
 
 export interface TokenModel {
-  access_toke: string;
+  access_token: string;
   token_type: string;
 }

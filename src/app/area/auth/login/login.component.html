@@ -1,21 +1,23 @@
 <section id="login">
   <!--background image-->
   <div id="login-bg-img">
-    <div id="login-content">
-      <div id="login-container">
-        <h2 id="login-text">Sign in</h2>
-        <div class="field">
-          <input type="text"  placeholder="Username">
-        </div>
-        <div class="field">
-          <input type="text"  placeholder="Password">
-        </div>
-        <div id="signin">
-          <button id="btn-signin" >
-            <p id="signin-text">Sign In</p>
-          </button>
-        </div>
+    <mat-card>
+      <div class="header">
+        <h3>Login To Your Dashboard</h3>
       </div>
-    </div>
+      <mat-card-content>
+        <form (ngSubmit)="submit()" [formGroup]="loginData">
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Student Number" formControlName="username">
+          </mat-form-field>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Password" type="password" formControlName="password">
+          </mat-form-field>
+          <div class="login-action">
+            <button mat-flat-button color="primary" type="submit">Login</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
   </div>
 </section>
