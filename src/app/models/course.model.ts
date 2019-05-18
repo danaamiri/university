@@ -10,7 +10,7 @@ export interface CourseModel {
   finalExamTime: TimestampModel;
   id: number;
   instructorName: string;
-  time: TimeModel;
+  time: TimeModel[];
 }
 
 export interface CourseInfoModel {

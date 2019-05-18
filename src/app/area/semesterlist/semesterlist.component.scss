@@ -31,37 +31,8 @@
 /* ==========================================================================
                                SemesterList
    ========================================================================== */
-#listofsemester{
+.List{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-
-#semesterlist{
-  background-color: powderblue;
-  padding-top: 35px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, -1);
-  height:400px;
-  width:350px;
-  border-radius: 15px;
-
-}
-.List {
-  border: 2px solid blue;
-  border-radius: 10px;
-  margin: 20px;
-  padding: 5px;
-}
-.List p{
-  font-size: 15px;
-  font-family: sans-serif;
-  text-align: center;
-  margin: 5px;
-}
-.List:hover{
-  background-color: #87CEFA;
-}
-.List:hover p{
-  color: aliceblue;
 }

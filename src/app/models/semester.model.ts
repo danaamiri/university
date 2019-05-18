@@ -5,6 +5,7 @@ export interface RegisterModel {
   courseId: number;
   error: string;
   status: boolean;
+  name?: string;
 }
 
 export interface SemesterModel {
@@ -17,7 +18,7 @@ export interface SemesterModel {
 
 export interface StudentSemesterCourseModel {
   id: number;
-  mark: number;
+  mark?: number;
   semesterCourse: CourseModel;
 }
 
