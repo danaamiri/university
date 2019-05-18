@@ -1,8 +1,8 @@
 /* ==========================================================================
                                    Login
    ========================================================================== */
-#login-bg-img{
-  background:url("../../../../assets/img/homepicture.jpg");
+#login-bg-img {
+  background: url("../../../../assets/img/homepicture.jpg");
   position: fixed;
   top: 50%;
   left: 50%;
@@ -18,56 +18,28 @@
   align-items: center;
 }
 
+mat-card {
+  .header {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+  }
 
-#login-content{
-  background-color: white;
-  padding: 50px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, -1);
-  height:400px;
-  width:350px;
-  border-radius: 15px;
-
-}
-#login-text{
-  text-align: center;
-  margin-bottom: 40px;
-  font-family: sans-serif;
-}
-.field{
-  width: 100%;
-}
-.field input{
-  width: 100%;
-  border: 1px solid #b7b7b7;
-  border-radius: 10px;
-  background-color: white;
-  padding:5px 7px;
-  margin-bottom: 40px;
-  font-family: sans-serif;
-}
-#btn-signin{
-  border-radius: 25px;
-  font-size: 15px;
-  transition: all .5s;
-  border:1px solid;
-  padding: 5px;
-  width: 150px;
-  height: 40px;
-  margin-top:50px;
-  margin-left:90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-#btn-signin:hover{
-  background-color: #555555;
-
-}
-#signin{
-  text-align: center;
-}
-#signin-text{
-  text-align: center;
-  font-family: sans-serif;
+  mat-card-content {
+    form{
+      mat-form-field{
+        input {
+          font-size: 20px;
+        }
+      }
+    }
+    .login-action {
+      margin-top: 30px;
+      width: 100%;
+      text-align: center;
+      button{
+        width: 100%;
+      }
+    }
+  }
 }

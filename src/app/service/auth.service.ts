@@ -7,9 +7,9 @@ import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTre
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService implements CanActivate{
-  private static login = '/api/auth/login';
-  private static currentUser = '/api/auth/current';
+export class AuthService implements CanActivate {
+  private static login = 'api/auth/login';
+  private static currentUser = 'api/auth/current';
 
   constructor(private apiClient: ApiClientService,
               private router: Router) { }
