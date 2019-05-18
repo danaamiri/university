@@ -19,7 +19,7 @@ export interface LoginRequestModel {
   password: string;
 }
 
-export interface TokeModel {
+export interface TokenModel {
   access_toke: string;
   token_type: string;
 }
