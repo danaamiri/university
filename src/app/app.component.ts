@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, OnInit} from '@angular/core';
+import {AfterViewChecked, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -9,7 +9,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class AppComponent implements OnInit, AfterViewChecked {
   title = 'university';
   isLogin = true;
-
+  @ViewChild('toolbar') toolbar: ElementRef;
+  @ViewChild('windowRouter') windowRouter: ElementRef;
   constructor(private activeRouter: ActivatedRoute,
               private router: Router) {
     router.events.subscribe(x => {
