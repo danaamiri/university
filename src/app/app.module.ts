@@ -5,7 +5,7 @@ import {
   MatCardModule,
   MatCheckboxModule,
   MatIconModule,
-  MatInputModule,
+  MatInputModule, MatListModule, MatTableModule,
   MatToolbarModule
 } from '@angular/material';
 
@@ -44,7 +44,10 @@ import {ReactiveFormsModule} from "@angular/forms";
     HttpClientModule,
     MatCardModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    MatCheckboxModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

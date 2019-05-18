@@ -1,10 +1,9 @@
-table,tr,td,th{
-  border: 2px solid purple;
-  border-collapse: collapse;
-  padding: 10px;
-  text-align: center;
-}
-table{
-  /*width: 350px;*/
-  margin-bottom: 80px;
+.time-table-component{
+  margin-top: 50px;
+  .header{
+    margin-bottom: 20px;
+    p{
+      font-size: 20px;
+    }
+  }
 }

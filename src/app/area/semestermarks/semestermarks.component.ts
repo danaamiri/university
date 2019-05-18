@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./semestermarks.component.scss']
 })
 export class SemestermarksComponent implements OnInit {
-
+  displayedColumns: string[] = ['courseName', 'unitCount', 'instructorName', 'mark'];
   constructor() { }
 
   ngOnInit() {

@@ -27,23 +27,12 @@
   margin: auto;
   padding: auto;
 }
-/* ==========================================================================
-                             Table
- ========================================================================== */
-table,tr,td,th{
-  border: 2px solid purple;
-  border-collapse: collapse;
-  padding: 10px;
-  text-align: center;
-}
-table{
-  /*width: 350px;*/
+
+table {
+  margin-top:80px;
   margin-bottom: 80px;
-}
-#course{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
 }
 
 /* ==========================================================================
@@ -63,3 +52,4 @@ table{
 .example-button-row button{
   transition: all 400ms ease-in-out;
 }
+
