@@ -24,3 +24,4 @@ export interface DepartmentInfoModel {
   id: number;
   name: string;
 }
+
