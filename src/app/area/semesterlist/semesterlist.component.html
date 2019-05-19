@@ -1,9 +1,12 @@
-<div class="container">
+<div class="w-100 text-center" style="margin-top: 50px" *ngIf="isLoading">
+  <i class="fa fa-spinner fa-spin fa-4x"></i>
+</div>
+<div class="container" *ngIf="!isLoading">
   <div class="row">
     <div class="col-12">
       <div id="profile-img" style="text-align: center">
-        <img id="pr-img" src="../../../assets/img/profile.jpg">
-        <p id="profile-text"> Mahsa Mokhtare</p>
+        <img id="pr-img" [src]="user.avatar">
+        <p id="profile-text">{{user.firstName + ' ' + user.lastName}}</p>
       </div>
     </div>
   </div>
@@ -11,17 +14,10 @@
     <div class="col-12">
       <div class="List">
         <mat-list>
-          <mat-list-item>Semester 1</mat-list-item>
+          <div *ngFor="let semester of semesterList">
+          <mat-list-item [routerLink]="'/panel/marks/'+semester.id">{{semester.year + ' Section ' + semester.yearHalf}}</mat-list-item>
           <mat-divider></mat-divider>
-          <mat-list-item>Semester 1</mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item>Semester 1</mat-list-item>
-          <mat-list-item>Semester 1</mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item>Semester 1</mat-list-item>
-          <mat-divider></mat-divider>
-          <mat-list-item>Semester 1</mat-list-item>
-          <mat-divider></mat-divider>
+          </div>
         </mat-list>
       </div>
     </div>

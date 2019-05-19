@@ -22,3 +22,11 @@ export interface StudentSemesterCourseModel {
   semesterCourse: CourseModel;
 }
 
+export interface ScheduleModel {
+  weekday: string;
+  firstTime: CourseModel;
+  secondTime: CourseModel;
+  thirdTime: CourseModel;
+  forthTime: CourseModel;
+}
+

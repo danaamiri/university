@@ -2,12 +2,12 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 <div id="home-page">
-  <div id="home-content">
+  <div id="home-content" *ngIf="user">
     <div class="row">
       <div class="col-md-12">
         <div id="profile-img" style="text-align: center">
-          <img id="pr-img" src="../../../assets/img/profile.jpg">
-          <p id="profile-text"> Mahsa Mokhtare</p>
+          <img id="pr-img" [src]="user.avatar">
+          <p id="profile-text">{{user.firstName + ' ' + user.lastName}}</p>
         </div>
       </div>
     </div>

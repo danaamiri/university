@@ -1,7 +1,7 @@
-import {TimeModel, TimestampModel} from './common.model';
+import {TimeModel, Timer, TimestampModel} from './common.model';
 
 export interface CourseListModel {
-  list: [];
+  list: CourseModel[];
   totalCount: number;
 }
 
@@ -10,7 +10,7 @@ export interface CourseModel {
   finalExamTime: TimestampModel;
   id: number;
   instructorName: string;
-  time: TimeModel[];
+  time: Timer[];
 }
 
 export interface CourseInfoModel {

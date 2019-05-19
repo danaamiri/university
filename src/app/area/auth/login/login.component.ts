@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   }
 
   processResponse(r: TokenModel) {
-    this.authService.setAuthToken(r.access_token);
+    this.authService.setAuthToken(r.accessToken);
     this.router.navigate(['/panel/home']);
   }
 

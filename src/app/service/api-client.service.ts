@@ -31,7 +31,7 @@ export class ApiClientService {
     let headers = new HttpHeaders();
     if (!config || !config.noAuth) {
       if (this.getAuthToken()) {
-        headers = headers.set('Authorization', 'bearer ' + this.getAuthToken());
+        headers = headers.set('Authorization', 'Bearer ' + this.getAuthToken());
       }
     }
     return headers;

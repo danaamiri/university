@@ -1,16 +1,16 @@
 import {Injectable} from '@angular/core';
 import {ApiClientService} from './api-client.service';
 import {Observable} from 'rxjs';
-import {RegisterModel, SemesterModel, StudentSemesterCourseModel} from '../models/semester.model';
+import {RegisterModel, ScheduleModel, SemesterModel, StudentSemesterCourseModel} from '../models/semester.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SemesterService {
-  private static registerCourse = '/api/semester/course/register';
-  private static semesterList = '/api/semester/list';
+  private static registerCourse = 'api/semester/course/register';
+  private static semesterList = 'api/semester/list';
   private static semesterMarks = 'api/semester/marks/';
-  private static semesterSchedule = 'api/semester/schedule/';
+  private static semesterSchedule = 'api/semester/schedule';
 
   constructor(private apiClient: ApiClientService) {
   }
@@ -27,8 +27,8 @@ export class SemesterService {
     return this.apiClient.get<StudentSemesterCourseModel[]>(SemesterService.semesterMarks + semesterId, null);
   }
 
-  getSemesterSchedule(semesterId: number): Observable<StudentSemesterCourseModel[]> {
-    return this.apiClient.get<StudentSemesterCourseModel[]>(SemesterService.semesterSchedule + semesterId, null);
+  getSemesterSchedule(): Observable<ScheduleModel[]> {
+    return this.apiClient.get<ScheduleModel[]>(SemesterService.semesterSchedule, null);
   }
 
 

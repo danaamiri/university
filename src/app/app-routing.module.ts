@@ -6,6 +6,7 @@ import {RegistrationComponent} from './area/registration/registration.component'
 import {SemesterlistComponent} from './area/semesterlist/semesterlist.component';
 import {TimetableComponent} from './area/timetable/timetable.component';
 import {AuthService} from './service/auth.service';
+import {SemestermarksComponent} from "./area/semestermarks/semestermarks.component";
 
 const routes: Routes = [
   {
@@ -30,11 +31,21 @@ const routes: Routes = [
       },
       {
         path: 'sem-info',
-        component: SemesterlistComponent
+        component: SemesterlistComponent,
+        children: [
+          {
+            path: 'marks/:id',
+            component: SemestermarksComponent
+          }
+        ]
       },
       {
         path: 'timetable',
         component: TimetableComponent
+      },
+      {
+        path: 'marks/:id',
+        component: SemestermarksComponent
       }
     ]
   },
