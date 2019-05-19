@@ -12,24 +12,19 @@
       </div>
     </div>
   </div>
-  <div id="choose-list">
-    <div class="row">
-      <div class="col-md-3">
-      </div>
-      <div class="col-md-3" >
-        <div class="carts" style="margin-right: 60px">
-          <i class="fas fa-clipboard-list"></i>
-          <h3>List of Marks</h3>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="carts" style="margin-left: 60px">
-          <i class="fas fa-registered"></i>
-          <h3>Registration</h3>
-        </div>
-      </div>
-      <div class="col-sm-3" >
-      </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+      <mat-card routerLink="/panel/semesterinfo" class="example-card">
+        <i class="fas fa-clipboard-list"></i>
+        <h3 > Semester Info</h3>
+      </mat-card>
+    </div>
+    <div class="col-md-3">
+      <mat-card class="example-card" routerLink="/panel/registration">
+        <i class="fas fa-registered"></i>
+        <h3>Registration</h3>
+      </mat-card>
     </div>
   </div>
 </div>
