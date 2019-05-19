@@ -11,6 +11,7 @@ export class SemesterService {
   private static semesterList = 'api/semester/list';
   private static semesterMarks = 'api/semester/marks/';
   private static semesterSchedule = 'api/semester/schedule';
+  private static registeredCourse = 'api/semester/registered';
 
   constructor(private apiClient: ApiClientService) {
   }
@@ -29,6 +30,10 @@ export class SemesterService {
 
   getSemesterSchedule(): Observable<ScheduleModel[]> {
     return this.apiClient.get<ScheduleModel[]>(SemesterService.semesterSchedule, null);
+  }
+
+  getRegisteredCourse(): Observable<RegisterModel[]> {
+    return this.apiClient.get<RegisterModel[]>(SemesterService.registeredCourse, null);
   }
 
 

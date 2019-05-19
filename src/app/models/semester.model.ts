@@ -1,4 +1,4 @@
-import {TimestampModel} from './common.model';
+import {Timer, TimestampModel} from './common.model';
 import {CourseModel} from './course.model';
 
 export interface RegisterModel {
@@ -6,6 +6,7 @@ export interface RegisterModel {
   error: string;
   status: boolean;
   name?: string;
+  time?: Timer[];
 }
 
 export interface SemesterModel {
