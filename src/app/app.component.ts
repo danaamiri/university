@@ -32,7 +32,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
   }
 
   logout() {
-    localStorage.removeItem('access-token');
+    localStorage.removeItem('auth-token');
     this.router.navigate(['/login']);
   }
 

@@ -26,10 +26,17 @@ export interface TimestampModel {
 export interface SearchRequestModel {
   count: number;
   startIndex: number;
-  filter: FilterModel[];
+  filter?: FilterModel[];
 }
 
 export interface FilterModel {
   property: string;
   values: string[];
+}
+
+export interface Timer {
+  startTime: string;
+  endTime: string;
+  id: number;
+  day: number;
 }
